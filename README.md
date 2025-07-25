@@ -1,9 +1,9 @@
-# Ollama WebUI
+# Raen UI
 
 Interfaz web moderna para chatear con modelos Ollama usando Flask.
 
 ## Autor
-Raen Norjan ([GitHub](https://github.com/RaenNorjan))
+Raen Norjan ([GitHub](https://github.com/raennorjan))
 
 ## Características
 - Chat con modelos Ollama
@@ -19,7 +19,7 @@ Raen Norjan ([GitHub](https://github.com/RaenNorjan))
 ## Instalación
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/RaenNorjan/ollamawebui.git
+   git clone https://github.com/raennorjan/RaenUI.git
    cd ollamawebui
    ```
 2. Instala dependencias:
@@ -40,4 +40,4 @@ Raen Norjan ([GitHub](https://github.com/RaenNorjan))
 - `/static/`: JS y CSS
 
 ## Licencia
-MIT
+Unliscence
