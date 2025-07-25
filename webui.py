@@ -1,6 +1,6 @@
 
 # Ollama WebUI - Backend principal
-# Autor: [Tu nombre o equipo]
+# Autor: [Raen Norjan]
 # Descripción: Servidor Flask para interfaz web de chat con Ollama
 
 from flask import Flask, render_template, request, jsonify, Response
