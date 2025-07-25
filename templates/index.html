@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ollama WebUI</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <button id="showSidebarBtn" style="display:none; position:fixed; top:56px; left:18px; z-index:1000; background:#7ab7ff; color:#181a20; border:none; border-radius:8px; padding:10px 20px; font-size:1em; cursor:pointer; box-shadow:0 2px 8px #0002;">⏩</button>
+    <div class="main-layout">
+        <aside class="sidebar">
+            <h1 style="font-size:1.3em; margin:0 0 12px 0; color:#7ab7ff;">Ollama Chatbot</h1>
+            <div class="sidebar-actions" style="display:flex; gap:8px; margin-bottom:12px;">
+                <button id="newConversation" type="button">Nueva conversación</button>
+                <button id="clearHistory" type="button">Limpiar</button>
+                <button id="toggleSidebar" type="button">⏪</button>
+            </div>
+            <ul id="sidebar-history"></ul>
+        </aside>
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-controls">
+                    <label for="model">Modelo:</label>
+                    <select id="model" name="model"></select>
+                    <label for="stream">Stream</label>
+                    <input type="checkbox" id="stream" name="stream">
+                    <label for="temperature">Temp:</label>
+                    <input type="number" id="temperature" name="temperature" min="0" max="2" step="0.01" value="1">
+                    <label for="top_k">Top K:</label>
+                    <input type="number" id="top_k" name="top_k" min="1" max="100" value="40">
+                    <label for="top_p">Top P:</label>
+                    <input type="number" id="top_p" name="top_p" min="0" max="1" step="0.01" value="0.9">
+                    <label for="num_predict">Tokens:</label>
+                    <input type="number" id="num_predict" name="num_predict" min="1" max="8192" value="8192">
+                    <label for="format">Formato:</label>
+                    <select id="format" name="format">
+                        <option value="">Texto</option>
+                        <option value="json">JSON</option>
+                    </select>
+                </div>
+            </div>
+            <div id="chat-history" class="chat-history"></div>
+            <form id="chatForm" class="chat-input-area">
+                <input type="text" id="userInput" name="userInput" placeholder="Escribe tu mensaje..." autocomplete="off" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="spinner" style="display:none;text-align:center;">
+                <span>⏳ Generando...</span>
+            </div>
+        </div>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
