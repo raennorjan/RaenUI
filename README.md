@@ -20,7 +20,7 @@ Raen Norjan ([GitHub](https://github.com/raennorjan))
 1. Clona el repositorio:
    ```sh
    git clone https://github.com/raennorjan/RaenUI.git
-   cd ollamawebui
+   cd RaenUI
    ```
 2. Instala dependencias:
    ```sh
